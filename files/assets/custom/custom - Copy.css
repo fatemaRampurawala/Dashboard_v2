@@ -1,0 +1,197 @@
+
+/*New custom css fixes 14/11*/
+	.pcoded .pcoded-navbar[navbar-theme="theme1"] .pcoded-item .pcoded-hasmenu .pcoded-submenu li.active>a
+	{
+		background: #404754 !important;
+	}
+	.custom_title
+	{
+		padding: 0 15px !important;
+    background-color: #404e67 !important;
+    margin-bottom: 20px;
+    font-size: 15px !important;
+	}
+
+	.custom_title h3
+	{
+		font-size: 20px;
+		color: #fff;
+	}	
+	.filter_div
+	{
+		border: none !important;
+	}
+	.filter_title span
+	{
+
+	}
+	.filter_title .fa-sort-desc{
+		display: none;
+	}
+
+	.filter_title span {
+    display: inline-block;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+.filter_title {
+    background: #202733 !important;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+}
+.filter_title i
+{
+	font-size: 16px;
+    color: #fe8a7d;
+}
+
+.filter_content .form-control
+{
+	    border-radius: 0;
+    width: 100%;
+    background: #efefef;
+    border: none;
+    padding: 10px 10px;
+    overflow: auto;
+    height: 120px;
+}
+    
+
+.filter_content .form-control option
+{
+	    margin-bottom: 3px;
+    font-size: 15px;
+    /* font-weight: bold; */
+    padding: 2px;
+        border-bottom: 1px solid #ccc;
+}
+.filter_content .form-control option:checked
+{
+	border: 1px solid transparent;
+}
+
+.filter_title h4
+{
+	font-size: 18px;
+    margin: 0;
+}
+.modal_title
+{
+	margin: 0;
+    font-size: 18px;
+    color: #202733;
+}
+#chartModel .modal-content
+{
+	background: rgba(255,255,255,0.8);
+}
+#chartModel .modal-header
+{
+	border-bottom: 1px solid #202733;
+}
+.applied_filters h5
+{
+	font-size: 16px;
+    padding-right: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 10px
+}
+.selectedFilter_body
+{
+	padding: 0;
+}
+.selectedFilter_head {
+    font-size: 16px;
+    font-weight: 600;
+}
+.selectedFilter_body li i
+{
+	margin-right: 5px !important;
+}
+
+.table-styling .table-primary, .table-styling.table-primary
+{
+	background: transparent !important;
+	border:1px solid #efefef;
+}
+.table-styling .table-primary thead, .table-styling.table-primary thead
+{
+	background: #303460;
+    border: none;	
+}
+.table td, .table th
+{
+	/*border: 1px solid #fff;*/
+}
+
+.table-bordered td
+{
+	color: #000;
+
+}
+.table-responsive {
+    display: inline-block;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 20px 25px;
+}
+.date_time
+{
+	font-size: 14px;
+	font-weight: 400;
+	text-align: left;
+	padding: 0 15px 20px;
+}
+.comment_list ul
+{
+	padding: 20px 15px;
+	
+}
+.comment_list ul li {
+    padding: 10px 20px;
+    background: #efefef;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    position: relative;
+
+}
+.comment_list ul li:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #efefef transparent transparent transparent;
+    position: absolute;
+    bottom: -20px;
+}
+.comment_list ul li img
+{
+	height: 50px;
+    width: 50px;
+}
+.comments_detail h3
+{
+	font-size: 16px;
+    font-weight: 600;
+    color: #fd7a6b;
+    margin-bottom: 5px;	
+        margin-top: 0;
+}
+
+.selected_filter_row textarea
+{
+	border-radius: 5px;
+    height: 120px;
+    background: #efefef;
+    border:none;
+}
+
+.selected_filter_row .btn-success{
+	margin-right: 0px;
+	margin-top: 10px;
+}
+/*New custom css fixes 14/11*/

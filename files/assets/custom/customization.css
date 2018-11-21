@@ -1,0 +1,290 @@
+.btn-simple span {
+    color: #fff;
+}
+
+.filter_title {
+    background: #eee;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+}
+
+
+.filter_div {
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+
+
+/* Selected Filter */
+
+.card_selected_filter, .card_comment_list {
+    background: #fff;
+    padding: 7px 10px;
+
+
+}
+
+.dn {
+    display: none!important;
+}
+
+.card-body {
+    margin-top : 5px;
+    padding: 7px 10px;
+}
+
+ul.selectedFilter_body li {
+    display: inline-block;
+    padding: 3px 10px;
+    background: #303460;
+    border-radius: 5px;
+    margin-right: 3px;
+    color: #fff;
+}
+
+.row .selected_filter_row {
+    margin-bottom: 20px;
+}
+
+ul.filter-control li {
+    display: inline-block;
+    color: #d450d9;
+    margin-right: 5px;
+}
+
+.filters span {
+
+    font-size: 1.2em !important;
+    color: #fff !important;;
+}
+
+/* General CSS */
+.d-inline {
+
+    display: inline-block;
+}
+
+.text_center {
+    text-align: center;
+}
+
+
+/*******
+======= Comments =======
+********/
+
+.list_comments ul.msg_list li {
+    width: 100%!important;
+}
+
+/******** Color Schems ********/
+
+.left_col {
+    background: #777d8b !important;
+    position: fixed;
+    width: 230px;
+}
+
+.nav.side-menu>li.active, .nav.side-menu>li.current-page {
+    border-right: 5px solid #FE8A7D !important;
+}
+
+.nav.side-menu>li.active>a {
+
+    background: #303460 !important;
+
+}
+
+.nav-md ul.nav.child_menu li:after {
+    border-left: 1px solid #FE8A7D !important;
+
+}
+
+.nav-md ul.nav.child_menu li:before {
+    background: #FE8A7D !important;
+
+}
+
+.nav-md ul.nav.child_menu li.active:before {
+    background: #337ab7 !important;
+
+}
+
+.sidebar-footer {
+    background: ##777d8b !important;
+}
+
+.sidebar-footer a {
+    background: #6c7fa8 !important;    
+}
+
+body {
+
+    background: ##777d8b !important;    
+}
+
+.nav_title {
+    background: ##777d8b !important;    
+}
+
+.btn-success {
+    background: #039871;  
+    border : none !important;  
+}
+.btn-success:hover, .btn-success:focus
+{
+    background: #005c4a !important;
+}
+
+.x_title {
+
+    color: #303460 !important;  
+}
+/**** Toggle ****/
+
+.btn-simple.active, .bg-pink {
+    /*background: #FE8A7D !important;  */
+    background: linear-gradient(to top, #0affe9 0%, #1e3738 100%) !important;
+    /*linear-gradient(to top, #ffd024 0%, #211b1b 100%) !important; 
+   /*background:  linear-gradient(to top, #ffd024 0%, #8e874b 100%) !important; */
+ /*   background: linear-gradient(to bottom, #84e6e1,  #84e6e1) !important; */
+    /*linear-gradient(to top, #ffd024 0%, #6d0a0a 100%) !important;*/
+}
+
+.btn-simple {
+   /* background: #039871 !important; */
+   border-color: #08523f !important;
+}
+
+.btn-simple.active, .bg-pink {
+   /* background: #08523f !important; */
+   border-color: #08523f !important;
+}
+.btn-primary {
+    border-color: #08523f !important;
+}
+
+.sidebar-footer span {
+    color: #fff !important;  
+}
+
+
+
+
+option:checked {
+  /*background: linear-gradient(to bottom, rgba(254,138,125,1) 0%,rgba(254,138,125,1),rgba(254,138,125,1) 100%);*/
+  background: linear-gradient(to bottom, rgb(8, 82, 63) 0%,rgb(8, 82, 63),rgb(8, 82, 63) 100%);
+  color: #FFFFFF;
+  border: 1px solid #E2E2E2;
+}
+
+.highlight { 
+background: linear-gradient(to bottom, rgba(254,138,125,1) 0%,rgba(254,138,125,1),rgba(254,138,125,1) 100%);
+  color: #FFFFFF;
+}
+.select2-selection__rendered
+{
+    color: #fff;
+}
+.select2-selection__placeholder
+{
+    color:#fff;
+}
+
+
+@font-face {
+    font-family: Kufyan;
+    src: url("../../ArabicFonts/Kufyan/OTF/Kufyan Arabic Regular.otf") format("opentype"),
+    url("../../ArabicFonts/Kufyan/TTF/Kufyan Arabic Regular.ttf")  format("truetype");
+}
+
+@font-face {
+    font-family: Kufyan;
+    font-weight: bold;
+    src: url("../../ArabicFonts/Kufyan/OTF/Kufyan Arabic Bold.otf") format("opentype"),
+    url("../../ArabicFonts/Kufyan/TTF/Kufyan Arabic Bold.ttf")  format("truetype");
+}
+
+/*below added by mufaddal*/
+.TitlePanel
+{
+    background: #fff !important;
+    font-size : x-large !important;
+    color : #ab801c !important;
+    
+}
+
+.Kufyan
+{
+        font-family: Kufyan;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-55, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+}
+
+.card{
+margin-bottom : 10px !important;    
+}
+
+.comments_detail {
+background: linear-gradient(to top,#fff,#efefef) !important;
+border-radius: 10px;
+padding-top : 5px;
+}
+
+.comments_detail h3{
+color :    #bf9a6f !important ;
+}
+.comment_list ul li {
+margin-bottom : 5px;  
+background: #efefef00 !important;
+padding : 0px !important;
+
+}
+
+.page_heading h3 {
+    font-size : x-large !important;
+    color : #ab801c !important;
+}
+
+.pcoded .pcoded-header[header-theme="theme1"] {
+background : linear-gradient(to bottom, #c8dcd5, #fffdff) !important;
+}
+
+.main-body .page-wrapper {
+    padding-top : 0;
+}
+
+.card .card-header {
+padding : 15px 20px;
+}
+
+
+.btn-grd-danger.hor-grd {
+/*background: linear-gradient(to bottom, #84e6e1,  #626d6f);*/
+ /*   background: linear-gradient(to bottom, #84e6e1,  #277584); */
+  /*  background: linear-gradient(to top, #ffd024 0%, #211b1b 100%); */
+    /* linear-gradient(to top, #60f3be 0%, #1f1415 51%, #23af95 100%); */
+}
+
+.btn-grd-danger.hor-grd {
+/*background: linear-gradient(to bottom, #84e6e1,  #626d6f);*/
+  /*  background: linear-gradient(to bottom, #84e6e1,  #277584); */
+    /*linear-gradient(to top, #ffd024 0%, #211b1b 100%);*/
+    background-image: linear-gradient(to top, #60f3be 0%, #1f1415 51%, #23af95 100%); 
+}
+.carousel-item img
+{
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+.main-body .page-wrapper {
+    padding : 1.0rem !important ;
+}
