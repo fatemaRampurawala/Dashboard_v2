@@ -10,7 +10,6 @@ var Dimensions;
 var Xaxis, Series = [];
 var Chart;
 var SeriesBkp;
-var MonthLabel = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 var DataTable = [];
 
 function GetTime() {
@@ -194,7 +193,7 @@ async function RenderFilters(FilterContainer) {
         url: "http://ec2-18-191-85-190.us-east-2.compute.amazonaws.com/Test/rest/q/getLabels?nq=true&DIM_MEA_FLAG=D&KPI_ID=" + KPI,
         data: {},
         success: function (dimensions) {
-             //Dimensions = dimensions;
+             Dimensions = dimensions;
              data = dimensions; 
             var FilterTitle, DimNum;
             $('#' + FilterContainer).html('<div class="row">');
@@ -875,8 +874,8 @@ function addComment() {
             $("#post-comment").val('');
             var d = new Date();
             //$('.list_comments ul').html('');
-            formCommentLi([[username, commentText, d.getDate()+"-"+ MonthLabel[d.getMonth()]+"-"+d.getFullYear()]]);
-            //console.log(data);
+            formCommentLi([[username, commentText, commentDateFormat(d)]]);
+            console.log(data);
             $('#comment_error').hide();
             $(".cmnt-submit").removeAttr("disabled");
         },
@@ -889,28 +888,39 @@ function addComment() {
     
 }
 
+function commentDateFormat(d){
+    var MonthLabel = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    var seconds = d.getSeconds();
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    hours = hours < 10 ? '0'+hours : hours;
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    seconds = seconds < 10 ? '0'+seconds : seconds;
+    return d.getDate()+"-"+ MonthLabel[d.getMonth()]+"-"+d.getFullYear()+" "+hours+" "+minutes+" "+seconds+" "+ampm;
+}
 function formCommentLi(comments) {
     var liString = "";
     //console.log("Printing comments");
     //console.log(comments);
     comments.forEach(function (item,i) {
-        liString +=
-                ` <div class="row m-b-25">
-                            <div class="col-auto p-r-0">
-                                <div class="u-img">
-                                    <img src="../files/assets/images/`+"avatar-2.jpg"+`.jpg" alt="user image" class="img-radius cover-img">
-
-                                </div>
+        liString +=`<li>
+                        <div class="row">
+                            <div class="col-auto user_image">
+                                <img src="../files/assets/images/`+"avatar-2"+`.jpg" alt="User">
                             </div>
-                            <div class="col">
-                                <h6 class="m-b-5">`+item[0]+`</h6>
-                                <p class="text-muted m-b-0">`+item[1]+`</p>
-                                <p class="text-muted m-b-0"><i class="feather icon-clock m-r-10"></i>`+item[2]+`</p>
+                            <div class="comments_detail col">
+                                <h3>`+item[0]+`</h3>
+                                <p>`+item[1]+`</p>
+                                <div class="date_time"><i class="feather icon-clock m-r-10"></i>`+item[2]+`</div>
                             </div>
-                        </div>`;
+                        </div>
+                    </li>`;
     });
     
-    //console.log(liString);
+    console.log(liString);
     $('.list_comments').append(liString);
 }
 
