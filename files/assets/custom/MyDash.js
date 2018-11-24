@@ -138,12 +138,9 @@ function RenderPlotLine(Caption,Color,Value){
     Plotline.dashStyle = 'shortdash';
     Plotline.width = 2;
     Plotline.label = {};
-    Plotline.label.style = {};
-    Plotline.label.style.fontWeight = 'bold';
-    Plotline.label.x = -130;
     Plotline.label.text = Caption;
-    //Plotline.label.align = 'right';
-    //Plotline.zIndex = 20;
+    Plotline.label.align = 'right';
+    Plotline.zIndex = 20;
     //Plotting 
 /*    Chart.yAxis[0].update({              //This is alternate way to plot lines
   	plotLines: Plotline
@@ -408,7 +405,7 @@ function LoadDefault(FilterContainer, KPI, Groupby, LegendDim, XAxisDim, Measure
     else {
         renderChart(Xaxis, Series, 'container'); 
         plotTargetLine();
-        
+        PlotKPIcard();
         LegendDim.forEach(function (item, index, arr) { //For each legend
 
             
@@ -444,10 +441,7 @@ function LoadDefault(FilterContainer, KPI, Groupby, LegendDim, XAxisDim, Measure
                                     Chart.addSeries(Series[l]);
                                     
                                 }
-                                setTimeout(function(){ 
                                 PopulateDataTable();
-                                    PlotKPIcard();
-                                    }, 300);
                                 
                             }
                         });
@@ -731,8 +725,6 @@ function loadDefaultKPISideMenu(){
 
 function LoadKPI(KPI) // When any side navigation button is clicked
 {
-    //Reset and Clear element code should run first - Try to put this in seperate function
-    
     $("ul.nav.child_menu>li.active").removeClass("active");
     console.clear();
     console.log("Start Loading...."+  GetTime());
@@ -765,7 +757,6 @@ if (charttype == '' && charttype == null)
                         //["#bfeaff", "#ffd9bf", "#fff7bf", "#d1bfff", "#ffeabf", "#f15c80"],
                 chart: {
                     type: charttype,
-                    marginLeft:200,
                     //backgroundColor : "#404e67",
                     zoomType: 'xy',
                     resetZoomButton: {
@@ -803,9 +794,8 @@ if (charttype == '' && charttype == null)
 
                 tooltip: {
                     headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                    pointFormat: '<tr>' +
-                            '<td style="padding:0"><b>{point.y:.1f}</b></td><td> : </td>\
-                            <td style="padding:0;text-align: right">{series.name} </td><td>\x3cspan style\x3d"color:{point.color}"\x3e\u25cf\x3c/span\x3e</td></tr>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                            '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
                     footerFormat: '</table>',
                     shared: true,
                     useHTML: true
@@ -815,17 +805,14 @@ if (charttype == '' && charttype == null)
                         pointPadding: 0.2,
                         borderWidth: 0,
                         dataLabels: {
-                            enabled: true,
-                            backgroundColor:"#FFF"
+                            enabled: true
                         }
                     },
                     line: {
                         dataLabels: {
-                            align:"right",
-                            enabled: true,
-                            backgroundColor:'rgba(255, 255, 255, 0.6)',//"#FFF",
+                            enabled: true
                         },
-                        enableMouseTracking: true
+                        enableMouseTracking: false
                         ,animation: {
                                     duration: 2000
                                     }
@@ -844,8 +831,7 @@ if (charttype == '' && charttype == null)
                     },
                     spline: {
                         dataLabels: {
-                            enabled: true,
-                            backgroundColor:'rgba(255, 255, 255, 0.6)'
+                            enabled: true
                         },
                         marker: {
                             radius: 4,
@@ -854,12 +840,7 @@ if (charttype == '' && charttype == null)
                         }
                     }
                 },
-                legend: {
-                    borderColor:"#ddd",
-                    borderRadius:10,
-                    borderWidth:1
 
-                },
                 series: seriesJSON
                         /*[{
                          name: legend[0][1],
@@ -913,7 +894,7 @@ function addComment() {
             var d = new Date();
             //$('.list_comments ul').html('');
             formCommentLi([[username, commentText, commentDateFormat(d)]]);
-            //console.log(data);
+            console.log(data);
             $('#comment_error').hide();
             $(".cmnt-submit").removeAttr("disabled");
         },
@@ -958,7 +939,7 @@ function formCommentLi(comments) {
                     </li>`;
     });
     
-    //console.log(liString);
+    console.log(liString);
     $('.list_comments').append(liString);
 }
 
@@ -1000,19 +981,13 @@ function PopulateDataTable()
 function createKPICards(elements,color,measureName,value,percent){
     // elements : shoiuld be a number 1,2,3 or 4, can accmodate maximum 4 cards  in a row
     var no_of_card = $(".Kpi_cards > div").length;
-    var heading = 3;
-    var rows=1;
     if( elements%4 != 0 & no_of_card >= 4){
         elements = elements%4;
-        rows = elements/4;
     }
     else if (elements > 4){
         elements = 4;
     }
     var col = 12/elements;
-    if (elements > 2 && rows==1)
-        heading = 5;
-    
     var arrowString;
     if(value < 0){
         value= value * -1;
@@ -1026,7 +1001,7 @@ function createKPICards(elements,color,measureName,value,percent){
                                                     <div class="card widget-statstic-card">
                                                         <div class="card-header">
                                                             <div class="card-header-left">
-                                                                <h`+heading+` class="Kufyan">`+measureName+`</h`+heading+`>
+                                                                <h3 class="Kufyan">`+measureName+`</h3>
                                                                 <p class="p-t-10 m-b-0 text-c-`+color+`">Compared to target</p>
                                                             </div>
                                                         </div>
@@ -1035,7 +1010,7 @@ function createKPICards(elements,color,measureName,value,percent){
                                                             <div class="text-center">
                                                                 <h3 class="d-inline-block">`+value+`</h3>
                                                                 `+arrowString+` 
-                                                                <span style="direction:ltr;" class="f-right d-inline-block bg-c-`+color+`">`+percent+`%</span>
+                                                                <span class="f-right bg-c-`+color+`">`+percent+`%</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1049,18 +1024,11 @@ function PlotKPIcard(){
    // var obj_map = new Object();
 $(".Kpi_cards").html('');
    var colors = ['yellow','blue','green','pink','orange'];
-   /* var int LegendCount = 0;
-    Dimensions.forEach(function(item){
-        if(item[2] == "L")
-        LegendCount = LegendCount + 1;    
-    });*/
-    
-    var total_no_of_cards = Series.length;
+    var total_no_of_cards = Measures.length;
     
     $.each(Series,function(index,item){
         var Measure_name = item.name;
-        var ind = index % Measures.length;
-        var target_value = Measures[ind][4];
+        var target_value = Measures[index][4];
         var value = item['data'][item['data'].length-1]-target_value;
         createKPICards(total_no_of_cards,colors[index],Measure_name,value,(value*100/target_value).toFixed(1));
     //    createKPICards(total_no_of_cards,colors[index],Measure_name,value,(value*100/target_value).toFixed(1));

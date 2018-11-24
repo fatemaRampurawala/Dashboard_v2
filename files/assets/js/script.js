@@ -51,6 +51,8 @@ $(document).ready(function() {
     $(".main-menu").mCustomScrollbar({
         setTop: "10px",
         setHeight: "calc(100% - 80px)",
+        //autoHideScrollbar:false,
+        //alwaysShowScrollbar:2
     });
     /*chatbar js start*/
 

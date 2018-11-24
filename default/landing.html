@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adminty - Premium Admin Template by Colorlib </title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="#">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
+    <link rel="icon" href="../files/assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="../files/bower_components/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../files/assets/css/bootstrap_rtl.css"> -->
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/icon/icofont/css/icofont.css">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/icon/feather/css/feather.css">
+    <!-- Syntax highlighter Prism css -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/pages/prism/prism.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../files/assets/custom/custom2.css">
+    <link rel="stylesheet" type="text/css" href="../files/assets/css/jquery.mCustomScrollbar.css">
+    <!-- Custom CSS -->
+    <!-- Custom css Added by Mufaddal -->
+    <link href="../files/assets/custom/custom.min.css" rel="stylesheet">
+    <link href="../files/assets/custom/customization.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../files/assets/icon/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom css Added by Mufaddal End -->
+    <style type="text/css">
+    body {
+        overflow: hidden;
+    }
+
+    .background {
+        width: 100vw;
+        height: 100vh;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3a1c71+0,d76d77+50,ffaf7b+100 */
+        background: #3a1c71;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #3a1c71 0%, #d76d77 50%, #ffaf7b 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #3a1c71 0%, #d76d77 50%, #ffaf7b 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #3a1c71 0%, #d76d77 50%, #ffaf7b 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a1c71', endColorstr='#ffaf7b', GradientType=0);
+        /* IE6-9 */
+    }
+
+    .background span {
+        width: 20vmin;
+        height: 20vmin;
+        border-radius: 20vmin;
+        backface-visibility: hidden;
+        position: absolute;
+        animation-name: move;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .background span:nth-child(1) {
+        color: #FFACAC;
+        top: 62%;
+        left: 43%;
+        animation-duration: 15.2s;
+        animation-delay: -6s;
+        transform-origin: 22vw -10vh;
+        box-shadow: -40vmin 0 9.6605313869vmin currentColor;
+    }
+
+    .background span:nth-child(2) {
+        color: #583C87;
+        top: 72%;
+        left: 26%;
+        animation-duration: 11.9s;
+        animation-delay: -15.4s;
+        transform-origin: -5vw -22vh;
+        box-shadow: 40vmin 0 14.5239256955vmin currentColor;
+    }
+
+    .background span:nth-child(3) {
+        color: #FFACAC;
+        top: 20%;
+        left: 84%;
+        animation-duration: 14.5s;
+        animation-delay: -3.3s;
+        transform-origin: -4vw 19vh;
+        box-shadow: -40vmin 0 11.3500748731vmin currentColor;
+    }
+
+    .background span:nth-child(4) {
+        color: #583C87;
+        top: 8%;
+        left: 68%;
+        animation-duration: 14.2s;
+        animation-delay: -7.9s;
+        transform-origin: 13vw -20vh;
+        box-shadow: -40vmin 0 5.9362959572vmin currentColor;
+    }
+
+    .background span:nth-child(5) {
+        color: #E45A84;
+        top: 5%;
+        left: 89%;
+        animation-duration: 12.4s;
+        animation-delay: -1.2s;
+        transform-origin: -22vw 10vh;
+        box-shadow: -40vmin 0 5.7268304644vmin currentColor;
+    }
+
+    .background span:nth-child(6) {
+        color: #583C87;
+        top: 64%;
+        left: 13%;
+        animation-duration: 14.9s;
+        animation-delay: -4.1s;
+        transform-origin: -1vw -21vh;
+        box-shadow: -40vmin 0 11.2329994265vmin currentColor;
+    }
+
+    .background span:nth-child(7) {
+        color: #E45A84;
+        top: 29%;
+        left: 25%;
+        animation-duration: 14.4s;
+        animation-delay: -5.2s;
+        transform-origin: -11vw 17vh;
+        box-shadow: -40vmin 0 7.752446176vmin currentColor;
+    }
+
+    .background span:nth-child(8) {
+        color: #FFACAC;
+        top: 33%;
+        left: 18%;
+        animation-duration: 11.7s;
+        animation-delay: -10.5s;
+        transform-origin: -14vw 14vh;
+        box-shadow: 40vmin 0 11.9886611155vmin currentColor;
+    }
+
+    .background span:nth-child(9) {
+        color: #583C87;
+        top: 65%;
+        left: 3%;
+        animation-duration: 15.5s;
+        animation-delay: -12.6s;
+        transform-origin: 8vw -13vh;
+        box-shadow: 40vmin 0 10.607666633vmin currentColor;
+    }
+
+    .background span:nth-child(10) {
+        color: #E45A84;
+        top: 57%;
+        left: 54%;
+        animation-duration: 12.1s;
+        animation-delay: -2s;
+        transform-origin: -9vw -14vh;
+        box-shadow: 40vmin 0 13.5218161582vmin currentColor;
+    }
+
+    .background span:nth-child(11) {
+        color: #E45A84;
+        top: 78%;
+        left: 60%;
+        animation-duration: 11s;
+        animation-delay: -15.5s;
+        transform-origin: -7vw 4vh;
+        box-shadow: -40vmin 0 8.9533479666vmin currentColor;
+    }
+
+    .background span:nth-child(12) {
+        color: #583C87;
+        top: 62%;
+        left: 89%;
+        animation-duration: 11.6s;
+        animation-delay: -11.8s;
+        transform-origin: 4vw -23vh;
+        box-shadow: -40vmin 0 13.8173820071vmin currentColor;
+    }
+
+    .background span:nth-child(13) {
+        color: #FFACAC;
+        top: 58%;
+        left: 22%;
+        animation-duration: 15.6s;
+        animation-delay: -5.1s;
+        transform-origin: -2vw -24vh;
+        box-shadow: -40vmin 0 9.9643278158vmin currentColor;
+    }
+
+    .background span:nth-child(14) {
+        color: #583C87;
+        top: 85%;
+        left: 1%;
+        animation-duration: 15.8s;
+        animation-delay: -4.8s;
+        transform-origin: 9vw 16vh;
+        box-shadow: -40vmin 0 12.471201587vmin currentColor;
+    }
+
+    .background span:nth-child(15) {
+        color: #E45A84;
+        top: 30%;
+        left: 5%;
+        animation-duration: 15.1s;
+        animation-delay: -2.9s;
+        transform-origin: 8vw 12vh;
+        box-shadow: -40vmin 0 6.9988632997vmin currentColor;
+    }
+
+    .background span:nth-child(16) {
+        color: #583C87;
+        top: 4%;
+        left: 90%;
+        animation-duration: 11.5s;
+        animation-delay: -12.1s;
+        transform-origin: -1vw -16vh;
+        box-shadow: 40vmin 0 9.8087176311vmin currentColor;
+    }
+
+    .background span:nth-child(17) {
+        color: #583C87;
+        top: 88%;
+        left: 57%;
+        animation-duration: 12.5s;
+        animation-delay: -1.3s;
+        transform-origin: 17vw 19vh;
+        box-shadow: -40vmin 0 12.9989080523vmin currentColor;
+    }
+
+    .background span:nth-child(18) {
+        color: #FFACAC;
+        top: 40%;
+        left: 62%;
+        animation-duration: 10.8s;
+        animation-delay: -1.3s;
+        transform-origin: -1vw 20vh;
+        box-shadow: 40vmin 0 7.4226139729vmin currentColor;
+    }
+
+    .background span:nth-child(19) {
+        color: #583C87;
+        top: 46%;
+        left: 80%;
+        animation-duration: 14.8s;
+        animation-delay: -5.5s;
+        transform-origin: -14vw 3vh;
+        box-shadow: 40vmin 0 14.2145265115vmin currentColor;
+    }
+
+    .background span:nth-child(20) {
+        color: #E45A84;
+        top: 46%;
+        left: 97%;
+        animation-duration: 15.1s;
+        animation-delay: -1.7s;
+        transform-origin: 16vw -1vh;
+        box-shadow: -40vmin 0 6.8945155844vmin currentColor;
+    }
+
+    @keyframes move {
+        100% {
+            transform: translate3d(0, 0, 1px) rotate(360deg);
+        }
+    }
+    </style>
+</head>
+<!-- Menu rtl layout -->
+
+<body>
+    <!-- landing -->
+    <section class="landing_section">
+        <div class="background">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="landingBoxes">
+            <div class="custom_ladning">
+                <div class="link_box bg-c-blue">
+                    <img src="../files/assets/images/reports.png" alt="reports">
+                    <p><small>REPORTS</small></p>
+                </div>
+                <div class="link_box bg-c-green">
+                    <img src="../files/assets/images/summary.png" alt="summary">
+                    <p><small>SUMMARY</small></p>
+                </div>
+                <div class="link_box bg-c-pink">
+                    <img src="../files/assets/images/kpi.png" alt="KPI">
+                    <p><small>KPI</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- landing -->
+</body>
+
+</html>

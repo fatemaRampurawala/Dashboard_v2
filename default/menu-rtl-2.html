@@ -81,7 +81,7 @@
                                 <div class="dropdown-primary dropdown">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <img src="../files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                        <span id="username">John Doe</span>
+                                        <span>Abdullah Yahya</span>
                                         <i class="feather icon-chevron-down"></i>
                                     </div>
                                     <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
@@ -270,7 +270,7 @@
                                                                                     </span>
                                                                         </label>
                                                                         <span  class="pull-right">&nbsp;</span>
-                                                                        <label class="btn btn-sm hor-grd btn-grd-inverse btn-simple" id="3" data-toggle="modal" data-target="#chartModel">
+                                                                        <label class="btn btn-sm hor-grd btn-grd-inverse btn-simple filter_btn" id="3" data-toggle="modal" data-target="#chartModel">
                                                                             <i class="fa fa-filter" aria-hidden="true"></i>
                                                                         </label>
                                                                     </div>
@@ -283,7 +283,7 @@
                                                                     <i class="tim-icons icon-gift-2"></i>
                                                                 </span>
                                                                         </label>
-                                                                        <label class="btn btn-sm hor-grd btn-grd-inverse btn-simple" name="Refresh">
+                                                                        <label class="btn btn-sm hor-grd btn-grd-inverse btn-simple refresh_btn" name="Refresh">
                                                                             <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Refresh <i class="fa fa-refresh"></i></span>
                                                                             <span class="d-block d-sm-none">
                                                                     <i class="fa fa-refresh"></i>
@@ -396,7 +396,7 @@
                                                     </div> -->
                                                     <div class="comment_list">
                                                         <ul class="list_comments">
-                                                            <li>
+                                                    <!--        <li>
                                                                 <div class="row">
                                                                     <div class="col-auto user_image"><img src="../files/assets/images/avatar-2.jpg" alt="User">
                                                                     </div>
@@ -417,7 +417,7 @@
                                                                             <div class="date_time"><i class="feather icon-clock m-r-10"></i> 09-Nov-2018 06 38 26 PM</div>
                                                                         </div>
                                                                     </div>
-                                                            </li>
+                                                            </li>   -->
                                                         </ul>
                                                         <hr style="width: 95%;">
                                                         <div class="card-block">
@@ -528,6 +528,23 @@
     <script src="../files/assets/custom/html2canvas.min.js"></script>
     <script src="../files/assets/custom/GeneratePDF.js"></script>
     <script src="../files/assets/custom/RenderSideMenu.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+            $('#chartModel').on('hidden.bs.modal', function () {
+                  $('.filter_btn').removeClass('active');
+            })
+
+            $('.refresh_btn').click(function(){
+
+                setTimeout(function () {
+                        $('.refresh_btn').removeClass('active');
+                },1000)
+                
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
